@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"></meta>
+  <title>IT Career</title>
+  <link rel="stylesheet" th:href="@{css/reset.css}">
+  <link rel="stylesheet" th:href="@{css/login/signup.css}">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Sign up</h1>
+    </div>
+    <div class="main">
+      <form method="post" th:action="@{/signup}">
+        <label>ユーザー名</label><br />
+        <input type="text" />
+        <label>メールアドレス</label><br />
+        <input type="email" />
+        <label>パスワード</label><br />
+        <input type="password" />
+        <div class="signup-button">
+          <button type="submit">ユーザー登録</button>
+        </div>
+      </form>
+      <a th:href="@{/login}">ログインはこちら</a>
+    </div>
+  </div>
+</body>
+</html>
