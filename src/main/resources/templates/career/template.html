@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <meta charset="UTF-8"></meta>
+  <title>IT Career</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+  <link rel="stylesheet" th:href="@{css/reset.css}">
+  <link rel="stylesheet" th:href="@{css/career/index.css}">
+</head>
+<body>
+  <nav class="template-header">
+    <div class="app-title">
+      <a th:href="@{/index}">IT Career</a>
+    </div>
+    <ul class="app-nav">
+      <li>
+        <a th:href="@{/userList}">ユーザー選択</a>
+      </li>
+      <li>
+        <a th:href="@{/new}">経歴作成</a>
+      </li>
+      <li>
+        <form method="post" th:action="@{/logout}">
+          <button type="submit">ログアウト</button>
+        </form>
+      </li>
+    </ul>
+  </nav>
+  <div class="main-contents">
+    <div th:include="__${contents}__"></div>
+  </div>
+  <script th:src="@{js/career/index.js}"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+a {
+	display: block;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.template-header {
+	height: 50px;
+	padding: 0 30px;
+	background-color: #000080;
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	line-height: 50px;
+}
+
+.app-title {
+	width: 100px;
+	font-size: 20px;
+}
+
+.app-nav {
+	width: 300px;
+	display: flex;
+	justify-content: space-between;
+}
+
+button{
+	background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.index-header {
+	padding: 20px 0 20px 10px;
+}
+
+.graph-area {
+	width: 1000px;
+	height: 550px;
+	margin: 0 auto;
+}
+
+.career-list {
+	width: 1000px;
+	margin: 50px auto;
+}
+
+.career-list > h2 {
+	text-align: center;
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+
+.career-table {
+	width: 100%;
+	table-layout:fixed;
+	border:1px #cccccc solid;
+}
+
+.table-head {
+    height:50px;
+	background-color: #87CEEB;
+	font-size: 20px;
+}
+
+.table-head th:first-child {
+	border-right: 1px #cccccc solid;
+	width: 25%;
+}
+
+.center-child {
+	width: 60%;
+}
+
+.table-head th:last-child {
+	border-left: 1px #cccccc solid;
+	width: 15%;
+}
+
+.table-body {
+	font-size: 14px;
+}
+
+.table-body td {
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px #cccccc solid;
+	padding: 0 3px;
+}
+
+.table-body-title {
+	border-right: 1px #cccccc solid;
+	font-weight: bold;
+	text-align: center;
+}
+
+.table-body-detail > p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.table-body-detail-link {
+	border-left: 1px #cccccc solid;
+}
+
+.detail-link {
+	color: #87CEEB;
+	text-align: center;
+}
+

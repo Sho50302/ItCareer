@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <meta charset="UTF-8"></meta>
+</head>
+<body>
+  <div th:fragment="index_contents">
+    <div class="index-header">
+      <h1>こんにちはuserさん</h1>
+    </div>
+    <div class="graph-area">
+      <canvas id="graph"></canvas>
+    </div>
+    <div class="career-list">
+      <h2>経験案件</h2>
+      <table class="career-table" border="1">
+        <thead class="table-head">
+          <tr>
+            <th>案件名</th>
+            <th class="center-child">案件概要</th>
+            <th>詳細</th>
+          </tr>
+        </thead>
+        <tbody class="table-body">
+          <tr>
+            <td class="table-body-title"><p>売上管理システム開発</p></td>
+            <td class="table-body-detail">
+              <p>
+                JavaとSQLを用いて売上データの入力、出力機能を担当。
+                JUnitを用いて単体テスト、結合テストまでを担当。
+              </p>
+            <td class="table-body-detail-link">
+              <a class="detail-link" th:href="@{/detail + ${user.userId}}">
+                  詳細はこちら
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="table-body-title"><p>社内チャットツール開発</p></td>
+            <td class="table-body-detail">
+              <p>
+                JavaScriptフレームワークであるReact.jsを使用し、社内チャットツールを作成。
+                お客様との要件定義から参画しました。
+              </p>
+            </td>
+            <td class="table-body-detail-link">
+              <a class="detail-link" th:href="@{/detail + ${user.userId}}">
+                  詳細はこちら
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+</body>
+</html>
