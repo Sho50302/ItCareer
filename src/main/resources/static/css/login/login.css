@@ -22,9 +22,17 @@ body {
 
 form > input {
 	width: 342px;
-	height: 25px;
+	height: 30px;
 	margin-bottom: 15px;
-	font-size: 15px
+	font-size: 15px;
+	border: 2px #cccccc solid;
+	border-radius: 4px;
+	padding: 0.3em;
+}
+
+form > input:focus {
+	outline: none;
+	border-color: #87CEEB;
 }
 
 .login-button {

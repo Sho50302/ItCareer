@@ -25,7 +25,7 @@ a {
 	justify-content: space-between;
 }
 
-button{
+.logout-button {
 	background-color: transparent;
     border: none;
     cursor: pointer;

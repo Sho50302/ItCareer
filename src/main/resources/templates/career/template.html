@@ -5,8 +5,9 @@
   <meta charset="UTF-8"></meta>
   <title>IT Career</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-  <link rel="stylesheet" th:href="@{css/reset.css}">
-  <link rel="stylesheet" th:href="@{css/career/index.css}">
+  <link rel="stylesheet" th:href="@{css/reset.css}" />
+  <link rel="stylesheet" th:href="@{css/career/index.css}" />
+  <link rel="stylesheet" th:href="@{css/career/new.css}" />
 </head>
 <body>
   <nav class="template-header">
@@ -22,7 +23,7 @@
       </li>
       <li>
         <form method="post" th:action="@{/logout}">
-          <button type="submit">ログアウト</button>
+          <button type="submit" class="logout-button">ログアウト</button>
         </form>
       </li>
     </ul>

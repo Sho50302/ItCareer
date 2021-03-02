@@ -16,9 +16,17 @@ public class CareerController {
 		return "career/template";
 	}
 	
-	// logout
+	// POST logout
 	@PostMapping("/logout")
 	public String postLogout() {
 		return "redirect:/login";
+	}
+	
+	// GET new
+	@GetMapping("/new")
+	public String getCareerNew(Model model) {
+		
+		model.addAttribute("contents", "career/new :: new_contents");
+		return "career/template";
 	}
 }

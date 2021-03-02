@@ -28,6 +28,14 @@ body {
 	width: 350px;
 	height: 30px;
 	font-size: 15px;
+	border: 2px #cccccc solid;
+	border-radius: 4px;
+	padding: 0.3em;
+}
+
+.input-area > input:focus {
+	outline: none;
+	border-color: #87CEEB;
 }
 
 .signup-button {
