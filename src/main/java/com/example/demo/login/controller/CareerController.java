@@ -31,6 +31,14 @@ public class CareerController {
 		return "career/template";
 	}
 	
+	// GET show
+	@GetMapping("/show")
+	public String getCareerShow(/*@PathValiable Long id,*/ Model model) {
+		
+		model.addAttribute("contents", "career/show :: show_contents");
+		return "career/template";
+	}
+	
 	// GET edit
 	@GetMapping("/edit")
 	public String getCareerEdit(/*@PathVariable Long id,*/ Model model) {
@@ -38,4 +46,5 @@ public class CareerController {
 		model.addAttribute("contents", "career/edit :: edit_contents");
 		return "career/template";
 	}
+	
 }

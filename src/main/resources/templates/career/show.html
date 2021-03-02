@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <meta charset="UTF-8"></meta>
+</head>
+<body>
+  <div th:fragment="show_contents">
+    <div class="show-career">
+      <div class="show-career-header">
+        <h1>詳細</h1>
+      </div>
+      <div class="show-career-body">
+        <div class="project-detail-area">
+          <h2 class="label-name">案件名</h2>
+          <p>売上管理システム開発</p>
+        </div>
+        <div class="project-detail-area">
+          <h2 class="label-name">案件概要</h2>
+          <p>
+            JavaとSQLを用いて売上データの入力、出力機能を担当。
+            JUnitを用いて単体テスト、結合テストまでを担当。
+          </p>
+        </div>
+        <div class="project-detail-area">
+          <h2  class="label-name">在籍期間</h2>
+          <p>12ヶ月</p>
+        </div>
+        <div class="detail-list-area">
+          <div class="detail-list">
+            <h2  class="label-name">言語</h2>
+            <ul>
+              <li>Java</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div class="detail-list">
+            <h2  class="label-name">OS</h2>
+            <ul>
+              <li>Windows</li>
+            </ul>
+          </div>
+          <div class="detail-list">
+            <h2  class="label-name">担当領域</h2>
+            <ul>
+              <li>詳細設計</li>
+              <li>プログラミング</li>
+              <li>単体テスト</li>
+              <li>結合テスト</li>
+            </ul>
+          </div>
+        </div>
+        <div class="buttons">
+          <div class="update-page-button">
+            <a class="update-page-link" th:href="@{/edit}">編集する</a>
+          </div>
+          <div class="delete-button">
+            <form>
+              <button type="submit" th:method="delete" id="delete-button-alert">
+                削除する
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
