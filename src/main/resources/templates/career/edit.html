@@ -5,13 +5,13 @@
   <meta charset="UTF-8"></meta>
 </head>
 <body>
-  <div th:fragment="new_contents">
+  <div th:fragment="edit_contents">
     <div class="new-career">
       <div class="new-career-header">
-        <h1>経歴作成</h1>
+        <h1>経歴編集</h1>
       </div>
       <div class="new-career-body">
-        <form method="post" th:action="@{/new}" th:object="${careerForm}">
+        <form method="post" th:action="@{/edit}" th:object="${careerForm}">
           <div class="label-name">案件名</div>
           <input type="text" class="project-name"/>
           <div class="label-name">案件概要</div>
@@ -78,8 +78,8 @@
              <div><input type="number" class="project-span"/>ヶ月</div>
            </div>
            <br />
-           <div class="new-button-area">
-             <button type="submit" class="new-button">作成する</button>
+           <div class="update-button-area">
+             <button type="submit" class="update-button">更新する</button>
            </div>
         </form>
       </div>
