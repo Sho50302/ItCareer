@@ -22,7 +22,7 @@ a {
 .app-nav {
 	width: 300px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 .logout-button {
@@ -111,7 +111,7 @@ a {
 }
 
 .detail-link {
-	color: #87CEEB;
+	color: #4169E1;
 	text-align: center;
 }
 

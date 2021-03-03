@@ -2,10 +2,25 @@
 
 {
 	const mydata = {
-      labels: ["Java", "Ruby", "PHP", "Python", "JS", "SQL", "C", "C++", "C#"],
+      labels: [
+	    "Java",
+        "C",
+        "C++",
+        "C#",
+        "Ruby",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Go",
+        ".NET",
+        "Swift",
+        "Kotlin",
+        "SQL",
+        "AWS"
+      ],
       datasets: [{
 	    label: '経験言語（月数）',
-        data: [18, 6, 3, 0, 6, 12, 3, 3, 3],
+        data: [14, 3, 3, 0, 6, 12, 3, 0, 0, 3, 5, 3, 12, 6],
         /*backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',

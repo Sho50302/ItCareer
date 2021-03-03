@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class CareerController {
 	
 	// GET index
-	@GetMapping("/index")
+	@GetMapping("/careers")
 	public String getCareerIndex(Model model) {
 		
 		model.addAttribute("contents", "career/index :: index_contents");
