@@ -38,11 +38,59 @@ body {
 	border-color: #87CEEB;
 }
 
+.admin-area {
+	display: flex;
+	justify-content: space-between;
+}
+
+.switch-label {
+	cursor: pointer;
+	position: relative;
+}
+
+.switch-label:before,
+.switch-label:after {
+	content: "";
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.switch-label:before {
+	width: 2em;
+	height: 1em;
+	border: 2px #cccccc solid;
+	border-radius: 32px;
+    background: #999;
+}
+
+.switch-label:after {
+	width: 1em;
+	height: 1em;
+	background: #cccccc;
+	border-radius: 50%;
+	position: relative;
+	left: -2.2em;
+	transition: 0.3s;
+}
+
+.switch input {
+	display: none;
+}
+
+.switch input:checked ~ .switch-label:before {
+	background-color: #4169E1;
+	border-color: #87CEEB;
+}
+
+.switch input:checked ~ .switch-label:after {
+	background-color: #87CEEB;
+	left: -1.1em;
+	transition: 0.3s;
+}
+
 .signup-button {
 	width: 150px;
-	height: 60px;
-	margin: 0 auto;
-	padding-top: 10px;
+	margin: 20px auto;
 }
 
 .signup-button > button {
@@ -68,3 +116,4 @@ a {
 	color: red;
 	font-size: 14px;
 }
+

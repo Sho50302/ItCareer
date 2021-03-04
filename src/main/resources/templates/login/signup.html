@@ -13,26 +13,33 @@
     </div>
     <div class="main">
       <form method="post" th:action="@{/signup}" th:object="${signupForm}">
-        <div class="label-name">ユーザー名</div>
+        <h2>ユーザー名</h2>
         <div class="input-area" 
         th:classappend="${#fields.hasErrors('userName')}? 'has-error'">
           <input type="text" th:field="*{userName}" />
           <span class="input-error" th:if="${#fields.hasErrors('userName')}"
           th:errors="*{userName}">userName error</span>
         </div>
-        <div class="label-name">メールアドレス</div>
+        <h2>メールアドレス</h2>
         <div class="input-area"
         th:classappend="${#fields.hasErrors('email')}? 'has-error'">
           <input type="text" th:field="*{email}" />
           <span class="input-error" th:if="${#fields.hasErrors('email')}"
           th:errors="*{email}">email error</span>
         </div>
-        <div class="label-name">パスワード</div>
+        <h2>パスワード</h2>
         <div class="input-area"
         th:classappend="${#fields.hasErrors('password')}? 'has-error'">
           <input type="password" th:field=*{password} />
           <span class="input-error" th:if="${#fields.hasErrors('password')}"
           th:errors="*{password}">password error</span>
+        </div>
+        <div class="admin-area">
+          <h2>管理者権限</h2>
+          <div class="switch">
+            <input type="checkbox" class="switch-check" id="switch-id"  value="true"/>
+            <label class="switch-label" for="switch-id"></label>
+          </div>
         </div>
         <div class="signup-button">
           <button type="submit">ユーザー登録</button>

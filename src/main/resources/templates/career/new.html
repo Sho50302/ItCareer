@@ -12,69 +12,34 @@
       </div>
       <div class="new-career-body">
         <form method="post" th:action="@{/new}" th:object="${careerForm}">
-          <div class="label-name">案件名</div>
+          <h2>案件名</h2>
           <input type="text" class="project-name"/>
-          <div class="label-name">案件概要</div>
+          <h2>案件概要</h2>
           <textarea class="project-detail"></textarea>
-          <div class="label-name">言語</div>
+          <h2>言語</h2>
           <div class="check-area">
-            <input type="checkbox" id="lan1" value="1">
-            <label for="lan1">Java</label>
-            <input type="checkbox" id="lan2" value="2">
-            <label for="lan2">C</label>
-            <input type="checkbox" id="lan3" value="3">
-            <label for="lan3">C++</label>
-            <input type="checkbox" id="lan4" value="4">
-            <label for="lan4">C#</label>
-            <input type="checkbox" id="lan5" value="5">
-            <label for="lan5">Ruby</label>
-            <input type="checkbox" id="lan6" value="6">
-            <label for="lan6">JavaScript</label>
-            <input type="checkbox" id="lan7" value="7">
-            <label for="lan7">PHP</label>
-            <input type="checkbox" id="lan8" value="8">
-            <label for="lan8">Python</label>
-            <input type="checkbox" id="lan9" value="9">
-            <label for="lan9">Go</label>
-            <input type="checkbox" id="lan10" value="10">
-            <label for="lan10">.NET</label>
-            <input type="checkbox" id="lan11" value="11">
-            <label for="lan11">Swift</label>
-            <input type="checkbox" id="lan12" value="12">
-            <label for="lan12">Kotlin</label>
-            <input type="checkbox" id="lan13" value="13">
-            <label for="lan13">SQL</label>
-            <input type="checkbox" id="lan14" value="14">
-            <label for="lan14">AWS</label>
+            <span th:each="programingLanguage:${checkProgramingLanguage}">
+              <input type="checkbox" name="checkProgramingLanguage"
+              th:value="${programingLanguage.value}" 
+              th:text="${programingLanguage.key}" />
+            </span>
           </div>
-          <div class="label-name">OS</div>
+          <h2>OS</h2>
           <div class="check-area">
-            <input type="checkbox" id="OS1" value="1">
-            <label for="OS1">Windows</label>
-            <input type="checkbox" id="OS2" value="2">
-            <label for="OS2">Mac</label>
-            <input type="checkbox" id="OS3" value="3">
-            <label for="OS3">Linux</label>
+            <span th:each="OS:${checkOS}">
+              <input type="checkbox" name="checkOS" 
+              th:value="${OS.value}" th:text="${OS.key}" />
+            </span>
            </div>
-           <div class="label-name">担当領域</div>
+           <h2>担当領域</h2>
            <div class="check-area">
-             <input type="checkbox" id="job1" value="1"/>
-             <label for="job1">要件定義</label>
-             <input type="checkbox" id="job2" value="2"/>
-             <label for="job2">基本設計</label>
-             <input type="checkbox" id="job3" value="3"/>
-             <label for="job3">詳細設計</label>
-             <input type="checkbox" id="job4" value="4"/>
-             <label for="job4">プログラミング</label>
-             <input type="checkbox" id="job5" value="5"/>
-             <label for="job5">単体テスト</label>
-             <input type="checkbox" id="job6" value="6"/>
-             <label for="job6">結合テスト</label>
-             <input type="checkbox" id="job7" value="7"/>
-             <label for="job7">納品</label>
+             <span th:each="job:${checkJob}">
+               <input type="checkbox" name="checkJob"
+               th:value="${job.value}" th:text="${job.key}" />
+             </span>
            </div>
            <div class="project-span-area">
-             <div class="label-name">在籍期間</div>
+             <h2>在籍期間</h2>
              <div><input type="number" class="project-span"/>ヶ月</div>
            </div>
            <br />
